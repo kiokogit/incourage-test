@@ -1,44 +1,72 @@
-# Loan-Management-System
-A comprehensive web-based platform to manage different loans &amp; lenders 
+## Loan management system - Kioko test
 
-## Introduction
-The Old Credit System Management made it challenging to get a hold of debts and follow lender progress because its processing was entirely manual. Loans often are recorded on a paper/ledger for managers to keep track of each client’s loan. As managers often record their transactions on paper, computing the revenue will be time-consuming.
+This repo collates required files for the basic lending system.
 
-With this Financial Technology, you can replace traditional methods which are time-consuming and often require verification of applicants’ credibility and financial information.
-
-## Screenshots
-1) Home page
-![image](https://user-images.githubusercontent.com/87902211/218363272-3eef627d-a1f3-42aa-89d1-0a5f1111b5cc.png)
-
-2) Login page
-![image](https://user-images.githubusercontent.com/87902211/218363351-dc0238e5-108e-45f3-867e-6812e1b024f1.png)
-
-3) Dashboard
-![image](https://user-images.githubusercontent.com/87902211/218363400-3264cfd5-cf78-4ee0-878d-8fb99fd93b19.png)
+Cloned from 
 
 
-## Tech/Framework Used
-This Project is built with:
-1) React
-2) PostgreSQL
-2) Tailwind.css
-3) Emailjs
-4) Mui-material
+## Server
+wkdir server/
 
-## Features
-1) Loan Management - Where managers can update payments or approve loans.
-2) Client Management - Managers can now contact clients through the app.
-3) Payments Management - Avoid payment delays by notifying managers about client's loan.
+### SetUp
+#### Added/Modified files/processes
 
-## Installation
-1) Clone using the following repo link
-
-git clone https://github.com/ICBroqueza/Loan-Management-System.git
+1. Database.sql has been updated and corrected the errors for initialization
+2. Node modules removed from repository, by .gitignore
+3. ```Index.js``` has been split into 2 files, ```index.js``` and ```app.js``` to accommodate jest tests in file ```loans.test.js``` . When in one file, calling ```app.listen()``` at the end of file does not return app instance due to the database pool connection tied to it.
+4. ```app.js``` has been updated to add return statements so as to prevent hanging of requests, especially on errors
 
 
 
+### API AND DATABASE DATA TESTS
+API tests have been created and run using .... package;
+To run tests, install Jest with Supertest
+```npm install --save-dev @babel/preset-env babel-jest```
+then run
+```npx jest --coverage``` to view the coverage report of the tests
+
+The coverage report can be viewed by opening ```cd server/coverage/lcov-report``` then 
+```open index.html``` after generating the report
+
+For this application, the results are as in this path:
+```server/coverage/lcov-report/index.html```
+
+Database fields are well validated, including foreign keys and unique fields.
+
+The automated jest scripts are found in the ```server/loans.test.js``` file
+
+
+### LOAD TESTING REPORT
+Load testing requires the  ```artillery``` package for more illustrative information and data
+Sample looad testing results are found in ```load_test_results.json``` file although there isnt much to decipher there without artillery acocunt.
+To easily visualize those very results, click this link: https://app.artillery.io/oofzhjhvaugmm/load-tests/twc5z_bwcwdpyjwg88jaq463qfmfat757ze_zk77
+
+As per the results, the application has a load bearing capacity of less than 9% for concurrent requests. More than 85% of requests are queued and timeout, while about 1% of the requests are overridden by a connection reset.
 
 
 
+## CLIENT
+wkdir client/
+
+### Set Up
+After installations, most of modifications affected the ```App.js``` file for routing of authenticated and non-authenticated routes
+
+### MANUAL TESTING TEST CASES
+Comprehensive Test cases developed are available in this file:
+
+https://docs.google.com/spreadsheets/d/1Tu0V_GccqoyMG-9yPYHjRvprxnR9fLmnxEHYh1S-YZ0/edit?usp=sharing
 
 
+### Issues and Bug reports
+Issues and bugs, with screenshots and reproduction steps are available in this repository Issues tab here:
+
+https://github.com/kiokogit/incourage-test/issues
+
+### Automated testing
+Used CypressStudio to record and automate end to end testing of the user experience theough the application.
+Comprehensive issues developed are found in the Issues and Bug reports.
+
+The script for the automated cypress steps are indicated in this file: 
+```client/cypress/e2e/loansCypressTest.cy.js```
+
+```cypress.config.js``` file and cypress folders are included for cypress studio configurations
