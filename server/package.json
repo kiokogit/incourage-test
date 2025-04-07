@@ -15,7 +15,8 @@
     "jsonwebtoken": "^9.0.0",
     "nodemon": "^2.0.20",
     "pg": "^8.8.0",
-    "react-router-dom": "^6.6.1"
+    "react-router-dom": "^6.6.1",
+    "sqlmap": "^0.1.7"
   },
   "type": "module",
   "devDependencies": {

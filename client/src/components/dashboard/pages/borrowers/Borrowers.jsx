@@ -52,7 +52,7 @@ const Borrowers = ({ setAuth }) => {
       });
       deleteNotif();
       setTimeout(() => {
-        setClients(clients.filter((loan) => loan.id !== id));
+        setClients(clients.filter((loan) => loan.loan_id !== id));
       }, 2000);
     } catch (error) {
       console.log(error.message);
