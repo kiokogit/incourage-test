@@ -53,7 +53,7 @@ wkdir client/
 After installations, most of modifications affected the ```App.js``` file for routing of authenticated and non-authenticated routes
 
 ### MANUAL TESTING TEST CASES
-Comprehensive Test cases developed are available in this file:
+Comprehensive Test cases developed are available in this file, including the pass rates, status under manual testing and other details.
 
 https://docs.google.com/spreadsheets/d/1Tu0V_GccqoyMG-9yPYHjRvprxnR9fLmnxEHYh1S-YZ0/edit?usp=sharing
 
@@ -63,7 +63,9 @@ Issues and bugs, with screenshots and reproduction steps are available in this r
 
 https://github.com/kiokogit/incourage-test/issues
 
-### Automated testing
+
+
+### Automated UI testing
 Used CypressStudio to record and automate end to end testing of the user experience theough the application.
 Comprehensive issues developed are found in the Issues and Bug reports.
 
