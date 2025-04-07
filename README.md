@@ -2,7 +2,7 @@
 
 This repo collates required files for the basic lending system.
 
-Cloned from 
+Cloned from https://github.com/Incourage-Insurance-Ltd/QA-Loan-Management-System
 
 
 ## Server
