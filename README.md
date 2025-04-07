@@ -36,7 +36,7 @@ Database fields are well validated, including foreign keys and unique fields.
 The automated jest scripts are found in the ```server/loans.test.js``` file
 
 
-### LOAD TESTING REPORT
+### PERFORMANCE/LOAD TESTING REPORT
 Load testing requires the  ```artillery``` package for more illustrative information and data
 Sample looad testing results are found in ```load_test_results.json``` file although there isnt much to decipher there without artillery acocunt.
 To easily visualize those very results, click this link: https://app.artillery.io/oofzhjhvaugmm/load-tests/twc5z_bwcwdpyjwg88jaq463qfmfat757ze_zk77
@@ -66,7 +66,7 @@ https://github.com/kiokogit/incourage-test/issues
 
 
 ### Automated UI testing
-Used CypressStudio to record and automate end to end testing of the user experience theough the application.
+Used CypressStudio to record and automate end to end testing of the user experience theough the application, just like PlayWright would.
 Comprehensive issues developed are found in the Issues and Bug reports.
 
 The script for the automated cypress steps are indicated in this file: 
