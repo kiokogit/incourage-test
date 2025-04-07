@@ -40,6 +40,7 @@ The automated jest scripts are found in the ```server/loans.test.js``` file
 Load testing requires the  ```artillery``` package for more illustrative information and data
 Sample looad testing results are found in ```load_test_results.json``` file although there isnt much to decipher there without artillery acocunt.
 To easily visualize those very results, click this link: https://app.artillery.io/oofzhjhvaugmm/load-tests/twc5z_bwcwdpyjwg88jaq463qfmfat757ze_zk77
+Of course this will require an artillery account
 
 As per the results, the application has a load bearing capacity of less than 9% for concurrent requests. More than 85% of requests are queued and timeout, while about 1% of the requests are overridden by a connection reset.
 
